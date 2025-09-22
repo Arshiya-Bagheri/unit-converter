@@ -1,0 +1,36 @@
+<!-- ============================= -->
+<!-- temperature.html                     -->
+<!-- Page for temperature conversions -->
+<!-- Extends base.html and provides form content -->
+<!-- ============================= -->
+{% extends "converter/base.html" %}
+{% block content %}
+<div class="converter-form">
+    <form action="{% url 'result' 'temperature' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Input field -->
+        <label>Enter the temperature to convert</label>
+        <input type="text" name="value" placeholder="Enter value">
+
+        <!-- From unit -->
+        <label>Unit to Convert from</label>
+        <select name="from_unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <!-- To unit -->
+        <label>Unit to Convert to</label>
+        <select name="to_unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit">Convert</button>
+    </form>
+</div>
+{% endblock %}

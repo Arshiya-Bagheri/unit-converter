@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;          /* make sure body fills full viewport */
+    margin: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;   
+    display:flex; 
+    justify-content: center;  /* horizontal centering */
+    align-items: center;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    background: white;
+    box-shadow: 3px 3px 0 black;
+}
+
+.header {
+    border-bottom: 2px solid black;   /* line under header */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.header nav a.active {
+    color: blue;
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 6px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+button, .button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 black;
+}
+
+button:hover , .button{
+    background: #f0f0f0;
+}
+
+.result-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}

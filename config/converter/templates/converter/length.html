@@ -1,0 +1,47 @@
+<!-- ============================= -->
+<!-- length.html                   -->
+<!-- Page for length unit conversions -->
+<!-- Extends base.html and provides form content -->
+<!-- ============================= -->
+{% extends "converter/base.html" %}
+{% block content %}
+<div class="converter-form">
+    <form action="{% url 'result' 'length' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Input field -->
+        <label>Enter the length to convert</label>
+        <input type="text" name="value" placeholder="Enter value">
+
+        <!-- From unit -->
+        <label>Unit to Convert from</label>
+        <select name="from_unit">
+            <option value="meter">Meter (m)</option>
+            <option value="centimeter">Centimeter (cm)</option>
+            <option value="millimeter">Millimeter (mm)</option>
+            <option value="kilometer">Kilometer (km)</option>
+            <option value="inch">Inch (in)</option>
+            <option value="foot">Foot (ft)</option>
+            <option value="yard">Yard (yd)</option>
+            <option value="mile">Mile (mi)</option>
+        </select>
+
+        <!-- To unit -->
+        <label>Unit to Convert to</label>
+        <select name="to_unit">
+            <option value="meter">Meter (m)</option>
+            <option value="centimeter">Centimeter (cm)</option>
+            <option value="millimeter">Millimeter (mm)</option>
+            <option value="kilometer">Kilometer (km)</option>
+            <option value="inch">Inch (in)</option>
+            <option value="foot">Foot (ft)</option>
+            <option value="yard">Yard (yd)</option>
+            <option value="mile">Mile (mi)</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit">Convert</button>
+    </form>
+</div>
+{% endblock %}
+

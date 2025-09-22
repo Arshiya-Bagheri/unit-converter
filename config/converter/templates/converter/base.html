@@ -1,0 +1,51 @@
+<!-- ============================= -->
+<!-- base.html                     -->
+<!-- Base template: contains shared layout (header, nav, content area) -->
+<!-- All other templates extend this one -->
+<!-- ============================= -->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS (served from Django static files) -->
+    <link rel="stylesheet" type="text/css" href="{% static 'converter/base.css' %}">
+    <title>Unit Converter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Header section with navigation -->
+            <aside class="header">
+                <h2>Unit Converter</h2>
+
+                <!-- Navigation links -->
+                <!-- The 'active' class highlights the current page based on URL name or category -->
+                <nav>
+                    <a href="{% url 'length' %}" 
+                       class="{% if request.resolver_match.url_name == 'length' or category == 'length' %}active{% endif %}">
+                       <span class="label">Length</span>
+                    </a>
+
+                    <a href="{% url 'weight' %}" 
+                       class="{% if request.resolver_match.url_name == 'weight' or category == 'weight' %}active{% endif %}">
+                       <span class="label">Weight</span>
+                    </a>
+
+                    <a href="{% url 'temperature' %}" 
+                       class="{% if request.resolver_match.url_name == 'temperature' or category == 'temperature' %}active{% endif %}">
+                       <span class="label">Temperature</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main content block (replaced by child templates) -->
+            <main class="main-content">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+

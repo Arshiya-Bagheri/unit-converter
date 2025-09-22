@@ -1,0 +1,40 @@
+<!-- ============================= -->
+<!-- weight.html                   -->
+<!-- Page for weight unit conversions -->
+<!-- Extends base.html and provides form content -->
+<!-- ============================= -->
+{% extends "converter/base.html" %}
+{% block content %}
+<div class="converter-form">
+    <form action="{% url 'result' 'weight' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Input field -->
+        <label>Enter the weight to convert</label>
+        <input type="text" name="value" placeholder="Enter value">
+
+        <!-- From unit -->
+        <label>Unit to Convert from</label>
+        <select name="from_unit">
+            <option value="milligram">Milligram (mg)</option>
+            <option value="gram">Gram (g)</option>
+            <option value="kilogram">Kilogram (kg)</option>
+            <option value="ounce">Ounce (oz)</option>
+            <option value="pound">Pound (lb)</option>
+        </select>
+
+        <!-- To unit -->
+        <label>Unit to Convert to</label>
+        <select name="to_unit">
+            <option value="milligram">Milligram (mg)</option>
+            <option value="gram">Gram (g)</option>
+            <option value="kilogram">Kilogram (kg)</option>
+            <option value="ounce">Ounce (oz)</option>
+            <option value="pound">Pound (lb)</option>
+        </select>
+    
+        <!-- Submit button -->
+        <button type="submit">Convert</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!-- ============================= -->
+<!-- result.html                   -->
+<!-- Shows result of a conversion (or error message) -->
+<!-- Extends base.html -->
+<!-- ============================= -->
+{% extends "converter/base.html" %}
+{% block content %}
+<div class="result-container">
+    <!-- Reset button takes the user back to length page by default -->
+    <form action="{% url 'length' %}" method="post">
+        {% csrf_token %}
+        
+        <!-- Error message (if present) -->
+        {% if error %}
+            <div style="color: red; font-weight: bold; margin-bottom: 10px;">
+                {{ error }}
+            </div>
+        {% endif %}
+        
+        <!-- Conversion result (if present) -->
+        {% if result %}
+            <div class="result">Result of your calculation</div>
+            <div class="result">{{ result }}</div>
+        {% endif %}
+        
+        <!-- Reset button -->
+        <button type="submit">Reset</button>
+    </form>
+</div>
+{% endblock %}

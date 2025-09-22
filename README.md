@@ -22,6 +22,7 @@ Original project idea: [Unit Converter – roadmap.sh Projects](https://roadmap.
 ---
 
 ## 🗂️ Project Structure
+```
 unit-converter/        # Root of the repository  
 ├── config/            # Django project settings  
 │   ├──config/        # Inner settings module (urls.py, settings.py, wsgi.py, etc.)  
@@ -32,6 +33,7 @@ unit-converter/        # Root of the repository
 ├── README.md          # This file  
 └── LICENSE            # License file  
 └──
+```
 ---
 
 ## 🔧 Installation & Setup

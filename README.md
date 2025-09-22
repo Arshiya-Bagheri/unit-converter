@@ -59,10 +59,20 @@ Now open your browser and go to **http://127.0.0.1:8000/** 🎉
 
 ## 📸 Screenshots
 ### Homepage
-![Homepage Screenshot](docs/screenshots/homepage.png)
+![Homepage Screenshot](docs/screenshots/home.png)
+
+### Converter
+![Converter Screenshot](docs/screenshots/converter.png)
+
+### Select Option
+![Select Option Screenshot](docs/screenshots/select_option.png)
 
 ### Conversion Result
 ![Result Screenshot](docs/screenshots/result.png)
+
+### Error
+![Error Screenshot](docs/screenshots/error_message.png)
+
 
 *(You can add screenshots by placing them inside a `docs/screenshots/` folder and updating the links above.)*  
 

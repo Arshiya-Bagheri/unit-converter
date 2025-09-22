@@ -31,7 +31,14 @@ unit-converter/            # Root of the repository
 │   └── manage.py          # Django management script  
 ├── requirements.txt       # Project dependencies  
 ├── README.md              # This file  
-└── LICENSE                # License file  
+├── LICENSE                # License file
+└── docs/                  # Documentation folder
+    └── screenshots/       # Store screenshots here
+        ├── home.png
+        ├── result.png
+        ├── converter.png
+        ├── select_option.png
+        └── error_message.png
 ```
 ---
 
@@ -71,10 +78,7 @@ Now open your browser and go to **http://127.0.0.1:8000/** 🎉
 ![Result Screenshot](docs/screenshots/result.png)
 
 ### Error
-![Error Screenshot](docs/screenshots/error_message.png)
-
-
-*(You can add screenshots by placing them inside a `docs/screenshots/` folder and updating the links above.)*  
+![Error Screenshot](docs/screenshots/error_message.png) 
 
 ---
 

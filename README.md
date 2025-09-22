@@ -23,15 +23,15 @@ Original project idea: [Unit Converter – roadmap.sh Projects](https://roadmap.
 
 ## 🗂️ Project Structure
 ```
-unit-converter/        # Root of the repository  
-├── config/            # Django project settings  
-│   ├──config/        # Inner settings module (urls.py, settings.py, wsgi.py, etc.)  
+unit-converter/            # Root of the repository  
+├── config/                # Django project settings  
+│   ├──config/             # Inner settings module (urls.py, settings.py, wsgi.py, etc.)  
 │   ├── converter/         # Django app with forms, views, templates 
 │   ├── db.sqlite3         # SQLite database (default)  
 │   └── manage.py          # Django management script  
-├── requirements.txt   # Project dependencies  
-├── README.md          # This file  
-└── LICENSE            # License file  
+├── requirements.txt       # Project dependencies  
+├── README.md              # This file  
+└── LICENSE                # License file  
 └──
 ```
 ---
@@ -41,7 +41,7 @@ Follow these steps to run the project locally:
 
 1. Clone the repository  
    git clone https://github.com/Arshiya-Bagheri/unit-converter.git  
-   cd unit-converter  
+   cd config 
 
 2. Create a virtual environment (recommended)  
    python -m venv venv  

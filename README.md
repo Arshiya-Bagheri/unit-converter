@@ -32,7 +32,6 @@ unit-converter/            # Root of the repository
 ├── requirements.txt       # Project dependencies  
 ├── README.md              # This file  
 └── LICENSE                # License file  
-└──
 ```
 ---
 
